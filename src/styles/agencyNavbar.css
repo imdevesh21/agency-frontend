@@ -1,0 +1,122 @@
+/* =========================
+   THEME VARIABLES
+========================= */
+:root {
+  --bg: #0b0e14;
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.6);
+  --border: rgba(255, 255, 255, 0.1);
+  --accent: #38bdf8;
+}
+
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --text: #0b0e14;
+  --muted: rgba(11, 14, 20, 0.6);
+  --border: rgba(11, 14, 20, 0.1);
+  --accent: #2563eb;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   AGENCY NAVBAR
+========================= */
+.agency-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(14px);
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid var(--border);
+}
+
+.agency-navbar-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+/* =========================
+   BRAND
+========================= */
+.brand {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--text);
+  opacity: 0.65;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* =========================
+   ACTIONS (RIGHT)
+========================= */
+.agency-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.soon-pill {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  opacity: 0.85;
+}
+
+/* =========================
+   THEME BUTTON
+========================= */
+.theme-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: rotate(12deg);
+}

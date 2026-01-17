@@ -1,4 +1,4 @@
-import Navbar from "../component/Navbar";
+import Navbar from "../component/AgencyNavbar";
 import EarthGlobe from "../component/Globe";
 import "../styles/hero.css";
 
