@@ -1,6 +1,7 @@
 /* =========================
    THEME VARIABLES
 ========================= */
+/* DEFAULT = DARK THEME */
 :root {
   --bg: #0b0e14;
   --text: #ffffff;
@@ -9,13 +10,15 @@
   --accent: #38bdf8;
 }
 
-[data-theme="light"] {
+/* LIGHT THEME OVERRIDES */
+html[data-theme="light"] {
   --bg: #f8fafc;
   --text: #0b0e14;
   --muted: rgba(11, 14, 20, 0.6);
   --border: rgba(11, 14, 20, 0.1);
   --accent: #2563eb;
 }
+
 
 /* =========================
    GLOBAL
@@ -37,9 +40,15 @@ body {
   width: 100%;
   z-index: 100;
   backdrop-filter: blur(14px);
-  background: rgba(0, 0, 0, 0.35);
+  background: color-mix(
+    in srgb,
+    var(--bg) 85%,
+    transparent
+  );
   border-bottom: 1px solid var(--border);
 }
+
+
 
 .agency-navbar-inner {
   max-width: 1200px;
@@ -54,9 +63,11 @@ body {
    BRAND
 ========================= */
 .brand {
-  font-size: 20px;
-  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+  cursor: pointer;
 }
+
 
 .brand span {
   color: var(--accent);

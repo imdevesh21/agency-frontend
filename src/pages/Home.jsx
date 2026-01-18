@@ -1,20 +1,24 @@
-import Navbar from "../component/AgencyNavbar";
-import EarthGlobe from "../component/Globe";
+import AgencyNavbar from "../component/AgencyNavbar";
+import Hero from "../sections/Hero";
+import About from "../sections/About";
+import Work from "../sections/Work";
+import Services from "../sections/Services";
+import Contact from "../sections/Contact";
+import Blog from "../sections/Blog";
+
 import "../styles/hero.css";
+import "../styles/sections.css";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-
-      <section className="hero">
-        <div className="globe-wrapper">
-          <EarthGlobe />
-        </div>
-
-        <h1 className="title">dev.io</h1>
-        <p className="tagline">COMING SOON</p>
-      </section>
+      <AgencyNavbar />
+      <Hero />
+      <About />
+      <Work />
+      <Services />
+      <Contact />
+      <Blog />
     </>
   );
 }

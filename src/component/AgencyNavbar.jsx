@@ -5,18 +5,19 @@ export default function AgencyNavbar() {
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    document.documentElement.setAttribute("dark-theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
   return (
     <header className="agency-navbar">
       <div className="agency-navbar-inner">
-        {/* brand */}
-        <div className="brand">
-          <div>Dev<span>.</span></div>io
-        </div>
 
-        {/* navigation */}
+        {/* Brand */}
+        <a href="#about" className="brand">
+          Dev<span>.</span>io
+        </a>
+
+        {/* Navigation */}
         <nav className="nav-links">
           <a href="#about">About</a>
           <a href="#work">Work</a>
@@ -28,14 +29,17 @@ export default function AgencyNavbar() {
         {/* Actions */}
         <div className="agency-actions">
           <span className="soon-pill">Coming soon</span>
-          <button className="theme-btn" onClick={() =>
-            setTheme(theme === "dark" ? "light" : "dark")
-          }
+          <button
+            className="theme-btn"
+            onClick={() =>
+              setTheme(theme === "dark" ? "light" : "dark")
+            }
           >
             {theme === "dark" ? "☀️" : "🌙"}
           </button>
         </div>
+
       </div>
     </header>
-  )
+  );
 }
