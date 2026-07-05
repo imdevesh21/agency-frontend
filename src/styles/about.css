@@ -1,0 +1,82 @@
+.about {
+  padding: 140px 24px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.02)
+  );
+}
+
+.about-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Label */
+.about-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+/* Title */
+.about-title {
+  font-size: 42px;
+  max-width: 720px;
+  margin: 0 0 20px;
+}
+
+/* Description */
+.about-desc {
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.75;
+  margin-bottom: 64px;
+}
+
+/* Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* Cards */
+.about-card {
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.about-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.about-card p {
+  margin: 0;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 32px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

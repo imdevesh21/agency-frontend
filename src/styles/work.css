@@ -1,0 +1,103 @@
+.work {
+  padding: 140px 24px;
+}
+
+.work-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Label */
+.work-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+/* Title */
+.work-title {
+  font-size: 42px;
+  margin-bottom: 64px;
+  max-width: 700px;
+}
+
+/* Grid */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+/* Card */
+.work-card {
+  padding: 32px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Header */
+.work-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.work-card-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Status */
+.status {
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  opacity: 0.85;
+}
+
+.status.live {
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+.status.in-progress {
+  border-color: #facc15;
+  color: #facc15;
+}
+
+.status.concept {
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+/* Description */
+.work-desc {
+  opacity: 0.75;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Meta */
+.work-meta {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .work-title {
+    font-size: 32px;
+  }
+}
